@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MusicManager</name>
+    <events>
+        <event-block sid="790327841041393">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5356639851881372" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_music</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5533986778877344">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2523544855294293" type="obj_music_manager">
+                            <param id="0" name="Instance variable">room</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Play intro</comment>
+                        <event-block sid="6967491761431611">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="4116456045488582" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="4883909569641565" type="Audio" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7118654505841745">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4585875091886499" type="obj_music_manager">
+                            <param id="0" name="Instance variable">room</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Play middle</comment>
+                        <event-block sid="7602516109851527">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="235937659184261" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="8904214632333323" type="Audio" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="620526740508618">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4184708387152233" type="obj_music_manager">
+                            <param id="0" name="Instance variable">room</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Play Outro</comment>
+                        <event-block sid="9829612739788472">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="1494890281683637" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="4415587160364115" type="Audio" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1782985483423229">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6027348832306947" type="obj_music_manager">
+                            <param id="0" name="Instance variable">room</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Play Battle music</comment>
+                        <event-block sid="5975248692364784">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="1448328466755477" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="1618092028153283" type="Audio" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2478675889759464">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="109134110379477" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_music</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="797585394644" type="Audio">
+                    <param id="0" name="Tag">&quot;game-music&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7696635058644033">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2267227017087234" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_music</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="7361130554310987" type="Audio">
+                    <param id="0" name="Tag">&quot;game-music&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8694413022758795">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2917457930877682" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_sfx</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="100171537665915" type="Audio">
+                    <param id="0" name="Tag">&quot;game-sfx&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4133581895423516">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4195915231226193" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_sfx</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="1471050659919101" type="Audio">
+                    <param id="0" name="Tag">&quot;game-sfx&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

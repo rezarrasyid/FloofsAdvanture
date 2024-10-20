@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">GameLayout</layout>
+        <layout order="3">MenuLayout</layout>
+        <layout order="4">WinDeathLayout</layout>
+        <event-sheet order="1">GameManager</event-sheet>
+        <event-sheet order="2">SFXManager</event-sheet>
+        <event-sheet order="5">MenuManager</event-sheet>
+        <event-sheet order="6">PausedEvent</event-sheet>
+        <event-sheet active="1" order="7">MusicManager</event-sheet>
+        <event-sheet order="8">WinDeathEvent</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Arrows" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Plugins/" />
+        <folder expanded="0" path="object-folder/Level/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="0" path="sound-folder/Boss/" />
+        <folder expanded="0" path="sound-folder/Enemy/" />
+        <folder expanded="0" path="sound-folder/Level/" />
+        <folder expanded="0" path="sound-folder/Menu/" />
+        <folder expanded="0" path="sound-folder/Player/" />
+        <folder expanded="1" path="animation-folder/obj_background/" />
+        <folder expanded="1" path="animation-folder/obj_player/" />
+        <folder expanded="1" path="animation-folder/obj_powerup/" />
+        <folder expanded="1" path="animation-folder/obj_coin/" />
+        <folder expanded="1" path="animation-folder/obj_spike/" />
+        <folder expanded="1" path="animation-folder/obj_trail/" />
+        <folder expanded="1" path="animation-folder/obj_health_pickup/" />
+        <folder expanded="1" path="animation-folder/obj_boss_door/" />
+        <folder expanded="1" path="animation-folder/obj_enemy/" />
+        <folder expanded="1" path="animation-folder/obj_sign/" />
+        <folder expanded="1" path="animation-folder/obj_hud_health/" />
+        <folder expanded="1" path="animation-folder/obj_boss_casing/" />
+        <folder expanded="1" path="animation-folder/obj_boss_health/" />
+        <folder expanded="1" path="animation-folder/obj_button_x/" />
+        <folder expanded="1" path="animation-folder/obj_convobox/" />
+        <folder expanded="1" path="animation-folder/obj_boss/" />
+        <folder expanded="1" path="animation-folder/obj_horizontal_platform/" />
+        <folder expanded="1" path="animation-folder/obj_vertical_platform/" />
+        <folder expanded="1" path="animation-folder/obj_platform_collision/" />
+        <folder expanded="1" path="animation-folder/obj_platform_vertical/" />
+        <folder expanded="1" path="animation-folder/obj_coin_hud/" />
+        <folder expanded="1" path="animation-folder/obj_enemy_col_l/" />
+        <folder expanded="1" path="animation-folder/obj_enemy_col_r/" />
+        <folder expanded="1" path="animation-folder/obj_boss_trigger/" />
+        <folder expanded="1" path="animation-folder/obj_options/" />
+        <folder expanded="1" path="animation-folder/obj_menu_box/" />
+        <folder expanded="1" path="animation-folder/obj_music_manager/" />
+        <folder expanded="1" path="animation-folder/obj_pause_manager/" />
+    </folders-expanded>
+</c2uistate>

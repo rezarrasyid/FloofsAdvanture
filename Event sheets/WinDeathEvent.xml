@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WinDeathEvent</name>
+    <events>
+        <include>SFXManager</include>
+        <event-block sid="3254574496180811">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1347220406496784" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8223249266749319" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="1813526958973708" type="sf_winner">
+                    <param id="0" name="Text">sf_winner2.Text</param>
+                </action>
+                <action id="0" name="Set text" sid="3168118382361687" type="sf_timer_stats">
+                    <param id="0" name="Text">sf_timer.Text</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9551673851183536" type="sf_timer" />
+                <action id="0" name="Set text" sid="5789546679500121" type="sf_hud_coins">
+                    <param id="0" name="Text">coins_collected</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8562054442036887">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="361170723841215" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">obj_menu_box</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6202479717907782" type="obj_menu_box">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="1366148281614679" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.youtube.com/juuamedia&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4001000579451099">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5462040379416405" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">obj_menu_box</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2086640774983199" type="obj_menu_box">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3994837519743762" type="System">
+                    <param id="0" name="Layout">MenuLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6113189319334931">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2705917823035045" type="Mouse">
+                    <param id="0" name="Object">obj_menu_box</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3806630765914012" type="obj_menu_box">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Call function" sid="5774340301244664" type="Function">
+                    <param id="0" name="Name">&quot;hover_sound&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7479146499264459">
+            <conditions>
+                <condition id="-22" name="Else" sid="5783034427024789" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="8104793085841054" type="obj_menu_box">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

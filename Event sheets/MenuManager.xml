@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuManager</name>
+    <events>
+        <include>SFXManager</include>
+        <variable constant="0" name="opt_controls" sid="7256708889013709" static="0" type="number">0</variable>
+        <event-block sid="4983024623240673">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6763769598214493" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2059636843268936" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="5792887218621437" type="System" />
+                <action id="-9" name="Destroy" sid="3992420937508301" type="sf_winner" />
+                <action id="-9" name="Destroy" sid="8543509081232917" type="sf_timer" />
+                <action id="-4" name="Set layer visible" sid="3396618801108969" type="System">
+                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3756136270122289" type="System">
+                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Check item exists" sid="2599212571140328" type="LocalStorage">
+                    <param id="0" name="Key">&quot;controls&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="3573377686199994" title="Hover Menu">
+            <sub-events>
+                <event-group description="" sid="6933266143936926" title="Layer Vis">
+                    <sub-events>
+                        <event-block sid="1695414746029912">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="7417287713035465" type="Mouse">
+                                    <param id="0" name="Object">obj_menu_box</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="2691677607510443" type="obj_menu_box">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="3972906180187692">
+                                    <conditions>
+                                        <condition id="-9" name="Layer is visible" sid="218096582718723" type="System">
+                                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="5159617229466956" type="System">
+                                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7488200389246969" type="Function">
+                                            <param id="0" name="Name">&quot;hover_sound&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6862841686474331">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="210454976496759" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="9001830094381791" type="obj_menu_box">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1808598883387648" title="Layer NotVis">
+                    <sub-events>
+                        <event-block sid="9969860613722373">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="6851124360562044" type="Mouse">
+                                    <param id="0" name="Object">obj_menu_box</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6439798950857479" type="obj_menu_box">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>SFX</comment>
+                                <event-block any="1" sid="9018355598311264">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7367033735072601" type="obj_menu_box">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="7465059159137319" type="obj_menu_box">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="2024144724002238" type="obj_menu_box">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7049841479426873">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="5249223733827984" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="229159899390451" type="Function">
+                                                    <param id="0" name="Name">&quot;hover_sound&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7904621497936337">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8232604274832319" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="650456994778094" type="obj_menu_box">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7096792223963898" title="Main Menu">
+            <sub-events>
+                <event-block sid="7992271303517014">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="6490084625558503" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9978160675924868" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="6897914355828376" type="System">
+                            <param id="0" name="Layout">GameLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Options</comment>
+                <event-block sid="5553177481844792">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="7705846690395702" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2912665572172166" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="5997812738172948" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Controls</comment>
+                <event-block sid="283858109507427">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="2764956930821068" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4125011133474047" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="6234815580685624" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9687774799462758" title="Controls">
+            <sub-events>
+                <comment>WASD</comment>
+                <event-block sid="6325672310434614">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="4135753894720153" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2347756787826045" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="1449936378352268" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="762590459312652">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="4154580528691412" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4197788152112083" type="System">
+                                    <param id="0" name="Variable">opt_controls</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set item" sid="9036947430498897" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;controls&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Arrow Keys</comment>
+                <event-block sid="7204275600556661">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="8292537334318817" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2090821407634764" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="5629384435739344" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8660757654180797">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="4436083326924914" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1184706707278764" type="System">
+                                    <param id="0" name="Variable">opt_controls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="309585578004607" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;controls&quot;</param>
+                                    <param id="1" name="Value">&quot;1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Gamepad</comment>
+                <event-block sid="896528305901381">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="4583137663241618" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1876962778388302" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3104573027630872" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5144921458583691">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="6727417732060768" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5581178797206341" type="System">
+                                    <param id="0" name="Variable">opt_controls</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Set item" sid="6267482151137872" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;controls&quot;</param>
+                                    <param id="1" name="Value">&quot;2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9276511918369016" title="Options">
+            <sub-events>
+                <comment>Mute SFX</comment>
+                <event-block sid="6612939405994746">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="2745237891144772" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9661381079562273" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="240292737398312" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1413735930574589">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2812207656195143" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2619866487073024" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mute SFX</comment>
+                        <event-block sid="7397592729877588">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6448759282871824" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="8583275117347559" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Mute Music</comment>
+                <event-block sid="1289978345939551">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="462439601664482" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="629369030349676" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="2952690706975167" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="559169899152037">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3046996866493151" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="6034770999421942" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mute SFX</comment>
+                        <event-block sid="712131427065378">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6611784477272472" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5199730759731473" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Fullscreen</comment>
+                <event-block sid="470980181685427">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="434863095671259" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9683066598802986" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="814166878653671">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2396333598191447" type="obj_pause_manager">
+                                    <param id="0" name="Instance variable">fullscreen</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="10" name="Request fullscreen" sid="1323707915795071" type="Browser">
+                                    <param id="0" name="Mode">5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="293982407859078" type="obj_pause_manager">
+                                    <param id="0" name="Instance variable">fullscreen</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4020253025317932">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1243509796398578" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Cancel fullscreen" sid="8194444429989014" type="Browser" />
+                                <action id="-13" name="Set boolean" sid="2859675547937532" type="obj_pause_manager">
+                                    <param id="0" name="Instance variable">fullscreen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1201418451990697" title="Globals">
+            <sub-events>
+                <event-block sid="5704654946601183">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="2503998338607023" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3482876383648967" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7113136045922603">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="4627365840407221" type="System">
+                                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="1365438663370406" type="System">
+                                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="6319833742974749" type="System">
+                                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3601955549823367">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="1113339671957614" type="System">
+                                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="8325858984748763" type="System">
+                                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="8226921664982974" type="System">
+                                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8394530494930227">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="6500953926979489" type="System">
+                                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="6991976059406238" type="System">
+                                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="783196454563023" type="System">
+                                    <param id="0" name="Layer">&quot;Options&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="2841400655457093" type="System">
+                                    <param id="0" name="Layer">&quot;Controls&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="824201068727841">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="6651452000324023" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="6749722573150778" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block any="1" sid="70095449664668">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="2300312292695313" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="3862490004132155" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="927590032233018">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="7210402286161627" type="System">
+                            <param id="0" name="Layer">&quot;Options&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="1282027076119932" type="System">
+                            <param id="0" name="Group name">&quot;Options&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4301280884208442">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6037260332795604" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="4187794553313351" type="System">
+                            <param id="0" name="Group name">&quot;Options&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5960946081486425">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="387385291623839" type="System">
+                            <param id="0" name="Layer">&quot;Controls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9451770619455022" type="System">
+                            <param id="0" name="Group name">&quot;Controls&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3222732500926058">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6593308632439152" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="2214244495424176" type="System">
+                            <param id="0" name="Group name">&quot;Controls&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4277951689044254" title="Local Storage">
+            <sub-events>
+                <event-block sid="792098335738334">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="5956764544401948" type="LocalStorage">
+                            <param id="0" name="Key">&quot;controls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="8269406060883276" type="LocalStorage">
+                            <param id="0" name="Key">&quot;controls&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7772928423017663">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="5307460838203147" type="LocalStorage">
+                            <param id="0" name="Key">&quot;controls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="826427610467054" type="System">
+                            <param id="0" name="Variable">opt_controls</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7355757070057173">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="4658955153780926" type="LocalStorage">
+                            <param id="0" name="Key">&quot;controls&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1172473884168645" type="System">
+                            <param id="0" name="Variable">opt_controls</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

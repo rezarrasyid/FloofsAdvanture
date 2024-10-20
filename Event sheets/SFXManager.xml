@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SFXManager</name>
+    <events>
+        <include>MusicManager</include>
+        <event-block sid="6720512144853627">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6312560400724421" type="obj_music_manager">
+                    <param id="0" name="Instance variable">room_sfx</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group description="" sid="9110448077119909" title="Menu">
+                    <sub-events>
+                        <event-block sid="3222707181587209">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1608659250813072" type="Function">
+                                    <param id="0" name="Name">&quot;hover_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3542294408624382">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="2024597401467328" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6123009087362959" type="Audio">
+                                            <param id="0" name="Audio file">MenuButton</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6386303648776365">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3429654360413007" type="Function">
+                                    <param id="0" name="Name">&quot;hover_menu_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1200718364196358">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="7877079139841107" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="5193056291978674" type="Audio">
+                                            <param id="0" name="Audio file">MenuButton</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1088404492585018" title="Player">
+                    <sub-events>
+                        <event-block sid="9297515663706152">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5854946333254246" type="Function">
+                                    <param id="0" name="Name">&quot;playerhurt_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5216747853334173">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="450491066176824" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1466715022648722" type="Audio">
+                                            <param id="0" name="Audio file">PlayerHurt_1</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9149302576697914">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6813201053653311" type="Function">
+                                    <param id="0" name="Name">&quot;playerhurt_2_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6922840897689766">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3321507840922778" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="8381473563227879" type="Audio">
+                                            <param id="0" name="Audio file">PlayerHurt_2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6211562420390323">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5414628164422574" type="Function">
+                                    <param id="0" name="Name">&quot;player_jump_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5264143818128332">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="2206882342354444" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1287117308968445" type="Audio">
+                                            <param id="0" name="Audio file">PlayerJump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9627712878828454">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8140053334720673" type="Function">
+                                    <param id="0" name="Name">&quot;player_walljump_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6980833288824458">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3833206514246799" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="584987584804392" type="Audio">
+                                            <param id="0" name="Audio file">WallJump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3974709391963696">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4321019912948505" type="Function">
+                                    <param id="0" name="Name">&quot;player_wallslide_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7059938156276134">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3195712710571537" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="583576010908977" type="Audio">
+                                            <param id="0" name="Audio file">WallSlide</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5655884314693391" title="Enemy">
+                    <sub-events>
+                        <event-block sid="8013062724779732">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7554140623670344" type="Function">
+                                    <param id="0" name="Name">&quot;enemy_death_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="982706915259473">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="7237715046411294" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4153383075873763" type="Audio">
+                                            <param id="0" name="Audio file">EnemyDeath</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8156861649534856" title="Boss">
+                    <sub-events>
+                        <event-block sid="4281883758365523">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5861215017518687" type="Function">
+                                    <param id="0" name="Name">&quot;bosshurt_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8641183690788444">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3183251137184773" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="3096798987199021" type="Audio">
+                                            <param id="0" name="Audio file">BossShake</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6280295678937065">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3407973851267274" type="Function">
+                                    <param id="0" name="Name">&quot;explosion_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9000823480682606">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3429971239921127" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4286913804390062" type="Audio">
+                                            <param id="0" name="Audio file">BossExplosion</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9128907036839511">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9466552395977969" type="Function">
+                                    <param id="0" name="Name">&quot;bossjump_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3936995314070632">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="7809084392639408" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="99349522377338" type="Audio">
+                                            <param id="0" name="Audio file">BossJump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8173066995213319">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5294702545249789" type="Function">
+                                    <param id="0" name="Name">&quot;bossflash_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9767602050973846">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="54640192485877" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="590945738327647" type="Audio">
+                                            <param id="0" name="Audio file">BossFlash</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2807497619903389" title="Level">
+                    <sub-events>
+                        <event-block sid="5251656526728607">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5736400020345954" type="Function">
+                                    <param id="0" name="Name">&quot;coin_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5759059171490011">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="3855941786688767" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1280504139657839" type="Audio">
+                                            <param id="0" name="Audio file">PickupCoin</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5290154547746208">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7344412374188482" type="Function">
+                                    <param id="0" name="Name">&quot;orb_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9212291495867914">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="9420245121941603" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6106030098880144" type="Audio">
+                                            <param id="0" name="Audio file">OrbCollect</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2298255308729085">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6993599136348486" type="Function">
+                                    <param id="0" name="Name">&quot;health_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8129268353059475">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="8875420650438097" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="7718631139014116" type="Audio">
+                                            <param id="0" name="Audio file">HealthPickup</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7136040810408249">
+                            <conditions>
+                                <condition id="0" name="On function" sid="7960732330242121" type="Function">
+                                    <param id="0" name="Name">&quot;spike_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8954568786270684">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="7378009736948275" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="7763953684619178" type="Audio">
+                                            <param id="0" name="Audio file">SpikeFall</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9875290852545892">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5943438235028692" type="Function">
+                                    <param id="0" name="Name">&quot;text_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3094534859727966">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="8364225327521671" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="5675726786221507" type="Audio">
+                                            <param id="0" name="Audio file">ScrollingText</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6809811156914418">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5693048934946667" type="Function">
+                                    <param id="0" name="Name">&quot;shake_sound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8024840087490113">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="5536016720404316" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="2189543140766949" type="Audio">
+                                            <param id="0" name="Audio file">Screenshake</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;game-sfx&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

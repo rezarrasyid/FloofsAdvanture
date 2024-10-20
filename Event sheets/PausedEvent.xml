@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PausedEvent</name>
+    <events>
+        <include>SFXManager</include>
+        <event-block any="1" sid="56626150681287">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1348146538036289" type="Keyboard">
+                    <param id="0" name="Key">80</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="227330923425532" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2122393279345613">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9583791259517597" type="obj_pause_manager">
+                            <param id="0" name="Instance variable">paused</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="143757569738494" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7833389383076236" type="System">
+                            <param id="0" name="Group name">&quot;Paused&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="1722667463184652" type="obj_pause_manager">
+                            <param id="0" name="Instance variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="58335508820473">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6444347423062764" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="8122640299962831" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5336570846151753" type="System">
+                            <param id="0" name="Group name">&quot;Paused&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6655213092426192" type="obj_pause_manager">
+                            <param id="0" name="Instance variable">paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="3517660282396703" title="Mouse Hover">
+            <sub-events>
+                <event-block sid="4106296782614641">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="3595733394835917" type="Mouse">
+                            <param id="0" name="Object">obj_menu_box</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="8519256429177553" type="obj_menu_box">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8293303458903975" type="Function">
+                            <param id="0" name="Name">&quot;hover_sound&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6586080225084659">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7382721506595533" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6764207263063689" type="obj_menu_box">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6851947241493732" title="Pause Options">
+            <sub-events>
+                <comment>Mute SFX</comment>
+                <event-block sid="3836273616541308">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="7774764431677705" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4252028428504657" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5921165393796669">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6905662896556606" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="16097514341351" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mute SFX</comment>
+                        <event-block sid="1066593493786541">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4749277827763521" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5427502789055858" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_sfx</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Mute Music</comment>
+                <event-block sid="2037161883761626">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="1602960614968223" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8886899527190414" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3555091395100395">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5407148254076108" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9944434837409124" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mute SFX</comment>
+                        <event-block sid="2759646394753726">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3011461556405136" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1330976706113296" type="obj_music_manager">
+                                    <param id="0" name="Instance variable">room_music</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Resume</comment>
+                <event-block sid="87953588250905">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="3571527283684924" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="891326820796558" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="6148113145112579" type="System">
+                            <param id="0" name="Group name">&quot;Paused&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="1888922636701419" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="1489707988768106" type="obj_pause_manager">
+                            <param id="0" name="Instance variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Back to menu</comment>
+                <event-block sid="4825918100010593">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="3589899666118119" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">obj_menu_box</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1147916472321452" type="obj_menu_box">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="1220035571918789" type="System">
+                            <param id="0" name="Group name">&quot;Paused&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="4177148223087487" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2308034811014287" type="obj_pause_manager">
+                            <param id="0" name="Instance variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="8732928710954263" type="System">
+                            <param id="0" name="Layout">MenuLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="9052180591691498">
+            <conditions>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="1721152920269292" type="System">
+                    <param id="0" name="Layer">&quot;Pause&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="2988382968533122" type="System">
+                    <param id="0" name="Group name">&quot;Pause Options&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="1951995425381922" type="System">
+                    <param id="0" name="Group name">&quot;Mouse Hover&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4480775930703786">
+            <conditions>
+                <condition id="-22" name="Else" sid="1521086771033563" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3659733028026189" type="System">
+                    <param id="0" name="Group name">&quot;Pause Options&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="7371793711417779" type="System">
+                    <param id="0" name="Group name">&quot;Mouse Hover&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
